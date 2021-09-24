@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='cs'>
+<head>
+<title>tabulka</title>
+<meta charset='utf-8'>
+<style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td, th {
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    thead {
+      background: red;
+    }
+    tbody {
+      background: orange;
+    }
+    tfoot {
+      background: green;
+    }
+</style>
+</head>
+<body>
+<table>
+
+    <thead>
+        <tr><td></td><th colspan="6">Obrat v mil.</th> </tr>	 
+        <tr><th rowspan="2">Divize</th><th colspan="2">Rok 2013</th><th colspan="2">Rok 2014</th><th colspan="2">Rok 2015</th> </tr>
+        <tr><th>1. pol</th><th>2. pol</th><th>1. pol</th><th>2. pol</th><th>1. pol</th><th>2. pol</th> </tr>
+    </thead>
+    
+    <tbody>
+        <tr><th>Divize sušenek</th><td>13,2</td><td>15,6</td><td>15,8</td><td>14,9</td><td>15,6</td><td>15,9</td> </tr>
+        <tr><th>Divize lízátek</th><td rowspan="2">25,1</td><td>2,5</td><td>3,1</td><td>3,0</td><td>3,4</td><td>3,9</td> </tr>
+        <tr><th>Divize čokolád</th><td>24,8</td><td>25,1</td><td>23,1</td><td>24,9</td><td>25,7</td> </tr>
+    </tbody>
+
+    <tfoot>
+        <tr><th>Celkem</th><td>38,3</td><td>42,9</td><td>44,0</td><td>41,0</td><td>43,9</td><td>45,5</td> </tr>
+        <tr><th>Celkem za rok</th><td colspan="2">81,2</td><td colspan="2">85,0</td><td colspan="2">89,4</td> </tr>
+    </tfoot>
+
+</table>
+
+</body>
+</html>
