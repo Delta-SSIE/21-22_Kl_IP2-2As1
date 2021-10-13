@@ -1,0 +1,78 @@
+table {
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    border: 1px solid black;
+    padding: 2px 4px;
+  }
+
+  body {
+    background-color: black;
+    /* color: white; */
+    color: rgb(245, 245, 245);
+    font-family: Georgia, serif;
+    font-size: 10pt;
+  }
+
+  h1, h2, h3 {
+    color: #ffd700;
+    font-family: 'Gill Sans', Calibri, sans-serif;
+  }
+
+  a {
+    color: hsl(9.1, 100%, 63.9%);
+  }
+
+  #uvod {
+    font-variant: small-caps;
+  }
+
+  .kroky {
+    font-style: italic;
+    font-size: small;
+  }
+
+  ol a, ul a {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  ul > li {
+    font-weight: bold;
+  }
+
+  p {
+    line-height: 130%; /* nebo 1.3 */
+    text-indent: 2.5em;
+  }
+
+  li p {
+    text-indent: 0;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h2 {
+    text-shadow: 1px 2px gray;
+  }
+
+  #ukazka {
+    text-decoration: underline;
+  }
+
+  table {
+    text-align: center;
+  }
+
+  p.popisek {
+    font-style: italic;
+  }
+
+  p.popisek em {
+    font-weight: bold;
+  }

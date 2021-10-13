@@ -1,0 +1,54 @@
+table {
+    border-collapse: collapse;
+  }
+
+  td, th {
+    border: 1px solid black;
+    padding: 2px 4px;
+  }
+
+  body {
+    background-color: black;
+    /* color: white; */
+    color: rgb(245, 245, 245);
+    font-family: Georgia, serif;
+    font-size: 10pt;
+  }
+
+  h1, h2, h3 {
+    color: #ffd700;
+    font-family: 'Gill Sans', Calibri, sans-serif;
+  }
+
+  a {
+    color: hsl(9.1, 100%, 63.9%);
+  }
+
+  #uvod {
+    font-variant: small-caps;
+  }
+
+  .kroky {
+    font-style: italic;
+    font-size: small;
+  }
+
+  ol a, ul a {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  ul > li {
+    font-weight: bold;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+  ol {
+    list-style-type: upper-roman;
+  }
+  ul, ol {
+    line-height: 1.25;
+  }  
+  

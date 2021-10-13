@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang='cs'>
+
+<head>
+  <title>Namazanou stranou dolu</title>
+  <meta charset='utf-8' />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Namazanou stranou dolu</h1>
+
+  <h2>Obsah</h2>
+
+  <ul>
+    <li><a href='#uvod'>Úvod</a></li>
+    <li><a href='#popisPadu'>Popis pádu „krajíce“</a></li>
+    <li><a href='#experiment'>Experiment a videoměření</a></li>
+    <li><a href='#ukazka'>Ukázka výsledků</a></li>
+  </ul>
+
+
+  <h2 id='uvod'>Úvod</h2>
+
+  <p>Fakt, že chleba padá na zem vždy namazanou stranou, je dobře znám, tak dobře, že zdomácněl i v jazyce jako úsloví.
+    Je tomu tak ale opravdu jen kvůli zákonu schválnosti, nebo můžeme chování padajícího chleba vysvětlit i za pomoci
+    fyzikálních zákonů? Řešení problému bylo předneseno na konferenci GIREP 2006 a bylo publikováno ve sborníku
+    konference.</p>
+
+  <p>Problém padajícího chleba byl studován již několikrát, první výpočty najdeme v Matthewsově publikaci <a
+      href='http://iopscience.iop.org/article/10.1088/0143-0807/16/4/005/meta'>[1]</a>, později je zpřesnil Bacon a kol.
+    <a href='http://scitation.aip.org/content/aapt/journal/ajp/69/1/10.1119/1.1289213'>[2]</a>. Bacon také použil
+    analýzu videa k určení úhlové rychlosti.</p>
+
+  <p>My můžeme tento matematický popis ověřit jako numerický model a také jako videoexperiment způsobem, který je
+    přístupný studentům na úrovni základního kurzu vysokoškolské fyziky, případně i na úrovni fyzikálního semináře. Jako
+    pomůcku s lépe definovanými rozměry, než má krajíc chleba, použijeme dřevěnou destičku délky 20 cm a necháme ji s
+    malým přesahem padat přes hranu stolu. Přesah volíme tak malý, aby destička skutečně jen „tak-tak“ přepadla. Pak
+    můžeme zkoumat, jak výsledek experimentu ovlivňují změny parametrů systému, konkrétně:</p>
+
+  <ul>
+    <li>Tření mezi „krajícem“ — destičkou a stolem. Tření zvýšíme použitím smirkového papíru</li>
+    <li>Moment setrvačnosti destičky <em>J</em>, či spíše gyroskopický poměr <em>J / m</em>. Moment setrvačnosti změníme
+      přidáním závaží buď ke středu, nebo na kraje.</li>
+    <li>Počáteční rychlost destičky v horizontálním směru.</li>
+  </ul>
+
+
+  <h2 id='popisPadu'>Popis pádu „krajíce“</h2>
+
+  <p>Pohyb destičky před opuštěním stolu můžeme rozdělit na tři fáze</p>
+
+  <ol class="kroky">
+    <li>
+      <p><strong>Rotace kolem hrany</strong><br />
+        Nejprve se celá destička otáčí kolem hrany a to až do okamžiku, kdy je třecí síla mezi stolem a destičkou příliš
+        slabá na to, aby ji udržela na místě.</p>
+    </li>
+
+    <li>
+      <p><strong>Klouzání</strong><br />
+        Ve druhé fázi destička klouže podél hrany, přičemž normálová složka tíhové síly přitlačující destičku ke stolu
+        postupně klesá až klesne na nulu. Pak ztratí destička kontakt se stolem a začne volně padat.</p>
+    </li>
+
+    <li>
+      <p><strong>Volný pád</strong><br />
+        Při volném pádu se těžiště destičky pohybuje dolů rovnoměrně zrychleným pohybem a celá destička se rovnoměrně
+        otáčí s konstantní úhlovou rychlostí a to tak dlouho, než dopadne na zem. Pro rozhodnutí, jak destička na zem
+        dopadne, stačí určit úhel mezi ní a zemí v okamžiku, kdy se těžiště nachází ve výšce poloviny délky destičky nad
+        zemí. Níže se již její poloha nemůže změnit z „namazanou stranou vzhůru“ na dolů nebo naopak.</p>
+    </li>
+  </ol>
+
+  <p>Pro každou fázi pohybu platí vlastní pohybové rovnice a jednotlivé fáze můžeme také pozorovat ve videozáznamu.
+    Odvození plných pohybových rovnic a jejich numerické řešení jsou popsány v plné verzi článku v příloze.</p>
+
+  <p>Obrázek níže je výstupem numerického modelu. Zobrazuje časový vývoj polohy (vlevo), úhlové rychlosti (nahoře) a
+    úhlu (dole). Pozice a body zobrazené zeleně odpovídají rotaci destičky, červené klouzání a modré volnému pádu.</p>
+
+
+  <img src='img/chleba-famulus-graf.png' alt='Výstup z modelu v prostředí FAMULUS' />
+
+  <h2 id='experiment'>Experiment a videoměření</h2>
+
+  <p>Průběh klouzání a pádu krajíce chleba je příliš rychlý, než abychom jej mohli kvantitativně pozorovat bez
+    záznamového zařízení — dataloggeru nebo ideálně videokamery. Natočíme tedy několikrát pád destičky přes hranu stolu
+    a poté procesem videoanalýzy odečteme její pozici v každém snímku.</p>
+
+  <img src='img/chleba-1-foto.jpg' alt='Rozfázovaný pád „krajíce chleba“ (1)' width="120" />
+  <img src='img/chleba-2-foto.jpg' alt='Rozfázovaný pád „krajíce chleba“ (2)' width="120" />
+  <img src='img/chleba-3-foto.jpg' alt='Rozfázovaný pád „krajíce chleba“ (3)' width="120" />
+  <img src='img/chleba-4-foto.jpg' alt='Rozfázovaný pád „krajíce chleba“ (4)' width="120" />
+
+
+  <p>Běžná videokamera snímá za sekundu 25 snímků, takže mezi dvěma snímky je časový odstup 40 ms. Pro zvýšení snímací
+    frekvence na dvojnásobek můžeme použít metodu popsanou v předchozí kapitole.</p>
+
+  <p>V každém snímku za pomoci programu pro videoanalýzu odečteme souřadnice tří vyznačených bodů (střed a dva krajní
+    body) a načteme změřené souřadnice do tabulkového procesoru, kde provedeme analýzu dat. Pro každou pozici spočteme
+    vzdálenost těžiště od osy otáčení (tedy hrany stolu), vzdálenost destičky od osy a úhlovou rychlost. Z vypočtených
+    hodnot můžeme rozlišit tři fáze pohybu tak, jak byly rozděleny v sekci <a href='#popisPadu'>popis pádu</a>.</p>
+
+
+  <img src='img/chleba-polohy-strobofoto.jpg' height="576" alt='chleba-polohy-strobofoto.jpg' />
+  <img src='img/chleba-polohy-graf.png' height="576" alt='chleba-polohy-graf.png' />
+
+  <p><em>Sada dat z videoměření. Vlevo stroboskopická fotografie sestavená z videoklipu za pomocí programu VideoStrobe,
+      vpravo graf, ve kterém každá trojice bodů reprezentuje polohu destičky na jednom snímku. Graf je škálován v
+      metrech.</em></p>
+
+  <ol>
+    <li>Ve fázi rotace se výrazně nemění vzdálenost těžiště a osy otáčení</li>
+    <li>Ve fázi klouzání sice narůstá vzdálenost těžiště od osy otáčení, ale destička je stále s osou v kontaktu. To
+      rozpoznáme tak, že vzdálenost destičky (reprezentované jako přímka) od osy je konstantní.</li>
+    <li>Ve fázi volného pádu klesá těžiště s konstantním zrychlením <em>g</em> a úhlová rychlost se nemění.</li>
+  </ol>
+
+
+  <h2 id='ukazka'>Ukázka výsledků</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <td></td>
+        <th colspan='2'><em>ω</em> [1/s]</th>
+        <th colspan='2'><em>φ</em>-dopad [°]</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td>exp.</td>
+        <td>sim.</td>
+        <td>exp.</td>
+        <td>sim.</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>samotná destička</td>
+        <td>5,3</td>
+        <td>5,2</td>
+        <td>140</td>
+        <td>135</td>
+      </tr>
+      <tr>
+        <td>vysoké tření</td>
+        <td>4,1</td>
+        <td>4,7</td>
+        <td>140</td>
+        <td>153</td>
+      </tr>
+      <tr>
+        <td>malé <em>J</em></td>
+        <td>7,2</td>
+        <td>7,5</td>
+        <td>189</td>
+        <td>195</td>
+      </tr>
+      <tr>
+        <td>velké <em>J</em></td>
+        <td>4,2</td>
+        <td>4,2</td>
+        <td>110</td>
+        <td>114</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Tabulka: Typické finální hodnoty ω a φ pro ruzné parametry experimentu</em></p>
+
+  <!-- Jan Koupil, 20. 10. 2016 -->
+
+
+</body>
+
+</html>
