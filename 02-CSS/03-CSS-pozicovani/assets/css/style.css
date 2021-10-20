@@ -1,0 +1,19 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    margin: 0;
+    padding: 1em;
+    font-size: large;
+}
+
+p.note {
+    font-style: italic;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+}

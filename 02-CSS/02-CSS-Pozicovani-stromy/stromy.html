@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='cs'>
+<head>
+    <title>Stromy</title>
+    <meta charset='utf-8'>
+    <style>
+        body {
+            font-family: "Calibri", "Arial", "Helvetica", sans-serif;
+            font-size: 1.3rem;
+            background-color: #e7e7e7;
+        }
+
+        div.strom {
+            display: inline-block;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #c0c0c0;
+
+            margin: 0.25rem;
+
+            padding: 1rem;
+            line-height: 150%;
+
+            width: 300px;
+            min-height: 500px;
+
+            background-color: #ffffff;
+        }
+
+        span.popis {
+            font-style: normal;
+            display: inline-block;
+            width: 50%;
+        }
+
+        span.popis::after {
+            content: ":";
+            font-style: italic;
+        }
+
+        span.hodnota {
+            font-style: italic;
+        }
+
+        span.nazev {
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        div.strom img {
+            max-width: 300px;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="stromy">
+    <div class="strom">
+        <span class="nazev"><span class="popis">Název</span> <span class="hodnota">Smrk</span></span><br>
+        <span class="vyska"><span class="popis">Typická výška</span> <span class="hodnota">až 50 m</span></span><br>
+        <span class="plod"><span class="popis">Plod</span> <span class="hodnota">šiška</span></span><br>
+        <img src="img/smrk.jpg" alt="Smrk" />
+    </div>
+    <div class="strom">
+        <span class="nazev"><span class="popis">Název</span> <span class="hodnota">Dub</span></span><br>
+        <span class="vyska"><span class="popis">Typická výška</span> <span class="hodnota">až 45 m</span></span><br>
+        <span class="plod"><span class="popis">Plod</span> <span class="hodnota">žalud</span></span><br>
+        <img src="img/dub.jpg" alt="Dub" />
+    </div>
+    <div class="strom">
+        <span class="nazev"><span class="popis">Název</span> <span class="hodnota">Jasan</span></span><br>
+        <span class="vyska"><span class="popis">Typická výška</span> <span class="hodnota">30 - 40 m</span></span><br>
+        <span class="plod"><span class="popis">Plod</span> <span class="hodnota">nažka</span></span><br>
+        <img src="img/jasan.jpg" alt="Jasan" />
+    </div>
+</div>
+        
+</body>
+</html>
