@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='cs'>
+<head>
+    <title>Stromy</title>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+    const stromy = [
+        {
+            nazev: "Smrk",
+            vyska: "až 50 m",
+            plod: "šiška",
+            img: "smrk.jpg"
+        },
+        {
+            nazev: "Dub",
+            vyska: "až 45 m",
+            plod: "žalud",
+            img: "dub.jpg"
+        },
+        {
+            nazev: "Jasan",
+            vyska: "30 - 40 m",
+            plod: "nažka",
+            img: "jasan.jpg"
+        }
+    ];
+
+    const mainDiv = document.createElement("div");
+    document.body.appendChild(mainDiv);
+    mainDiv.className = "stromy";
+
+    for (let strom of stromy) {
+        mainDiv.innerHTML += 
+            `<div class="strom">
+                <span class="nazev"><span class="popis">Název</span> <span class="hodnota">${strom.nazev}</span></span><br>
+                <span class="vyska"><span class="popis">Typická výška</span> <span class="hodnota">${strom.vyska}</span></span><br>
+                <span class="plod"><span class="popis">Plod</span> <span class="hodnota">${strom.plod}</span></span><br>
+                <img src="img/${strom.img}" alt="Smrk" />
+            </div>`;
+    }
+
+</script>
+        
+</body>
+</html>

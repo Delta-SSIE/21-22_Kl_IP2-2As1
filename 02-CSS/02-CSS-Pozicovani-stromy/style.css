@@ -1,0 +1,50 @@
+
+body {
+    font-family: "Calibri", "Arial", "Helvetica", sans-serif;
+    font-size: 1.3rem;
+    background-color: #e7e7e7;
+}
+
+div.strom {
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c0c0c0;
+
+    margin: 0.25rem;
+
+    padding: 1rem;
+    line-height: 150%;
+
+    width: 300px;
+    min-height: 500px;
+
+    background-color: #ffffff;
+}
+
+span.popis {
+    font-style: normal;
+    display: inline-block;
+    width: 50%;
+}
+
+span.popis::after {
+    content: ":";
+    font-style: italic;
+}
+
+span.hodnota {
+    font-style: italic;
+}
+
+span.nazev {
+    font-size: larger;
+    font-weight: bold;
+}
+
+div.strom img {
+    max-width: 300px;
+    display: block;
+    margin-top: 0.5rem;
+}
+
