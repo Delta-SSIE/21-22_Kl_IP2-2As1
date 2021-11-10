@@ -1,0 +1,84 @@
+:root {
+    --border-style: 1px solid #c0c0c0;
+}
+
+html, body {
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family:  Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+    background-color: #f0f0f0;
+}
+
+#page {
+    border: var(--border-style);
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 1000px;
+    width: 90%;
+    min-width: 600px;
+
+    background-color: #ffffff;
+}
+
+header {
+    border-bottom: var(--border-style);
+}
+
+header > h1 {
+    text-align: center;
+    margin: 0.25rem auto;
+}
+
+#central {
+    position: relative;
+}
+
+main {
+    margin-left: 200px;
+    margin-right: 150px;
+    border-left: var(--border-style);
+    border-right: var(--border-style);
+    padding: 0.5rem;
+}
+
+#central > nav {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 180px;
+} 
+
+#central > aside {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 120px;
+    max-height: 400px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+footer {
+    border-top: var(--border-style);
+    font-size: x-small;
+    text-align: center;
+    padding: 0.25rem;
+    clear: both;
+}
+
+figure{
+    float: left;
+}
+
+img.myImage {
+    width: 150px;
+    
+}
+
+h3 {
+    clear: both;
+}
