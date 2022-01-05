@@ -1,0 +1,59 @@
+:root {
+    --main-bg-color: white;
+    --menu-bg-color: #0000c0;
+    --menu-bg-color-hover: #0000f0;
+    --menu-font-color: yellow;
+    --menu-border-color: yellow;
+  }
+  
+
+body {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+#navMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: var(--menu-font-color);
+    width: 10rem;
+}
+
+#navMenu li {
+    padding: 0;
+    margin-left: 0.5rem;
+    margin: 0;
+    border-bottom: 2px solid var(--menu-border-color);
+}
+
+
+#navMenu li:last-child {
+    border-bottom: none;
+}
+
+
+#navMenu a{
+    display: block;
+    padding-left: 0.5rem;
+    background-color: var(--menu-bg-color);
+    text-decoration: none;
+
+    transition-property: transform, background-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 100ms;    
+}
+
+#navMenu a:hover {
+    transform: translateX(1rem);
+    background-color: var(--menu-bg-color-hover);
+}
+
+#navMenu a:link, 
+#navMenu a:hover, 
+#navMenu a:visited {
+    color: var(--menu-font-color);
+}
+
+
