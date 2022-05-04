@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8"/>
+    <title>O mnì</title>
+    <style>
+      li.list-item {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>O mnì</h1>
+    
+    <ul>
+      <li>Pøezdívka: <span id="nickname"></span></li>
+      <li>Záliby:  <span id="favorites"></span></li>
+      <li>Odkud jsem: <span id="hometown"></span></li>
+    </ul>
+
+    <script>
+      document.body.style.fontFamily = "Arial, sans-serif";
+      
+      let nick = document.getElementById("nickname");
+      nick.textContent = "Hraboš";
+
+      let favs = ["sbírání obilí", "hromadìní", "spánek"];
+      document.getElementById("favorites").textContent = favs.join(", ")
+
+      let items = document.querySelectorAll("li");
+      // for (let item of items){
+      //   item.className = "list-item";
+      // }
+      items.forEach(i => i.className = "list-item")
+      
+    </script>
+  </body>
+</html>

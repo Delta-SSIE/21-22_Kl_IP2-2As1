@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Kdo to cvièení doopravdy øeší, ten sem nìco napíše</title>
+    <style>
+      .alreadyRead {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Seznam knih</h1>
+
+    <script>
+      const books = [
+      {
+        title: 'The Design of EveryDay Things',
+        author: 'Don Norman',
+        alreadyRead: false,
+        img: 'https://img-cloud.megaknihy.cz/5156368-large/88cca5c63f3408f230fefe36a5cff19e/the-design-of-everyday-things.jpg'
+      }, {
+        title: 'The Most Human Human',
+        author: 'Brian Christian',
+        alreadyRead: true,
+        img: 'https://media.libris.to/jacket/04472125_most-human-human.jpg'
+      }
+    ];
+
+      const list = document.createElement('ul');
+      for (let book of books) {
+        //vyrobit položku
+        const li = document.createElement('li');
+        // li.innerHTML = `${book.author}: ${book.title}` +
+        //   `<img src='${book.img}' width='300'>`
+        //dat do ni text
+        li.textContent = `${book.author}: ${book.title}`;
+
+        if (book.alreadyRead)
+          li.className = 'alreadyRead';
+        
+        const bookImg = document.createElement('img');
+        bookImg.src = book.img;
+        bookImg.width = 300;
+        li.appendChild(bookImg);
+        
+        //pripojit polozku do seznamu
+        list.appendChild(li);
+      }
+
+      document.body.appendChild(list);
+    </script>
+  </body>
+</html>
