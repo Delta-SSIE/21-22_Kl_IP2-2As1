@@ -1,0 +1,35 @@
+body {
+    margin: 0 1rem;
+}
+
+thead tr {
+    background-color: black;
+    color: white;
+}
+
+tr {
+    border-bottom: 1px solid lightgray;
+    padding: 2px 0;    
+}
+th, td {
+    padding: 0 1em;
+    text-align: center;
+}
+th.tym, td.tym {
+    text-align: left;
+}
+td.tym img {
+    height: 30px;
+}
+
+.ctvrtfinale {
+    background-color: darkblue;
+    color: white;
+}
+.osmifinale {
+    background-color: lightskyblue;
+}
+.sestup {
+    background-color: red;
+    color: white;
+}
