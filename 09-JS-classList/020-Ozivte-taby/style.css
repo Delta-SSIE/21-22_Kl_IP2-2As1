@@ -1,0 +1,40 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10pt;
+  }
+  
+  #zalozky {
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  #zalozky li {
+    background-color: LightGrey;
+    display: block;
+    float: left;
+    cursor: pointer;
+    padding: 0.2em 1em;
+    border: 1px solid grey;
+    border-bottom: none;
+    margin: 0;
+  }
+  #zalozky li:hover {
+    background-color: white;
+  }
+  #zalozky li.aktivni {
+    background-color: black;
+    font-weight: bold;
+    color: white;
+  }
+  #karty {
+    clear: both;
+    border: 1px solid grey;
+    padding: 0 1em;
+    text-align: justify;
+  }
+  #karty > div {
+    display: none;
+  }
+  #karty > div.aktivni {
+    display: block;
+  }
+  
