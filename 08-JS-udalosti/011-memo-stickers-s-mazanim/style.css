@@ -1,0 +1,25 @@
+body {
+  font-family: "Calibri", "Arial", "Helvetica", sans-serif;
+}
+.solved {
+  color: gray;
+  text-decoration: line-through;
+}
+.input {
+  display: flex;
+}
+#memoText {
+  flex: 1 1 90%;
+}
+#storeBtn {
+  flex: 0 0 auto;
+}
+
+div.memo {
+  background-color: lightyellow;
+  padding: 1ex;
+  margin: 1ex;
+  border: 1px solid #c0c0c0;
+  display: inline-block;
+  cursor: pointer;
+}

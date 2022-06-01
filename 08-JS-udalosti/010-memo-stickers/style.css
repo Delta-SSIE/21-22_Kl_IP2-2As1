@@ -1,0 +1,14 @@
+body {
+  font-family: "Calibri", "Arial", "Helvetica", sans-serif;
+}
+#memoText {
+  width:90%
+}
+
+div.memo {
+  background-color: lightyellow;
+  padding: 1ex;
+  margin: 1ex;
+  border: 1px solid #c0c0c0;
+  display: inline-block;
+}

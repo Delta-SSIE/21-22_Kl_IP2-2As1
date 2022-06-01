@@ -1,0 +1,7 @@
+label {
+  display: inline-block;
+  min-width: 10em;
+}
+input[type="text"]{
+  width: 15em;
+}
