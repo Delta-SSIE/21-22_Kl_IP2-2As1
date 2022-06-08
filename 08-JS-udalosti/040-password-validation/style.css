@@ -1,0 +1,7 @@
+label {
+  display: inline-block;
+  min-width: 7em;
+}
+#warning {
+  color: red;
+}

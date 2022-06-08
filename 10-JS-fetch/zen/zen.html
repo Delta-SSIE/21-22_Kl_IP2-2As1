@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch demo</title>
+    <script>
+        function fetchWisdom() {
+            const display = document.getElementById('zen');
+
+            fetch('https://api.github.com/zen')
+            .then( x => x.text())
+            .then( x => display.innerText = x);
+        }
+
+        window.addEventListener(
+            "DOMContentLoaded", 
+            function () {
+                document
+                .getElementById('newWisdom')
+                .addEventListener(
+                    'click',
+                    fetchWisdom
+                )
+
+                fetchWisdom();
+            }      
+        )
+    </script>
+</head>
+<body>
+    New zen wisdom:
+    <div id="zen"></div>
+    <button id="newWisdom">Gimme a new one</button>
+
+
+</body>
+</html>

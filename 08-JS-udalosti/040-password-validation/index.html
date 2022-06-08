@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - JS Password Validation - Solution</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<form>
+  <div><label for="oldpass">Old password:</label><input type="password" name="oldpass" id="oldpass" onchange="passChange();" onkeyup="passChange();"></div>
+  <div><label for="pass">Your password:</label><input type="password" name="pass" id="pass" onchange="passChange();" onkeyup="passChange();"></div>
+  <div><label for="pass2">Verify password:</label><input type="password" name="pass2" id="pass2"onchange="passChange();" onkeyup="passChange();"></div>
+
+  <div id="warning"></div>
+  <div><input type="submit" value="Change password" disabled="disabled"></div>
+
+</form>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

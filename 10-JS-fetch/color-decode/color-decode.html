@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        #code {
+            border-collapse: collapse;            
+        }
+        #code td {
+            width: 1ex;
+            height: 1ex;
+        }
+    </style>
+</head>
+<body>
+   <table id="code"></table> 
+   <script>
+
+const url = 'https://sifrovani.maturita.delta-www.cz/color/decode';
+const table = document.getElementById('code');
+
+fetch(url)
+.then(x => x.json())
+.then(x => x.encoded)
+.then(displayCode);
+
+function displayCode(codeStr) {
+    const rows = codeStr.split("\n");    
+    //const maxLen = rows[0].length;
+    for (let row of rows){
+        const tr = document.createElement("tr");
+        table.appendChild(tr);
+        for (let letter of row){
+            const td = document.createElement("td");
+            td.style.backgroundColor = letter === 'K' ? "#000" 
+                                    :  letter === 'R' ? "#F00"
+                                    :  letter === 'G' ? "#0F0"
+                                    :  letter === 'B' ? "#00F"
+                                    :  letter === 'C' ? "#0FF"
+                                    :  letter === 'M' ? "#F0F"
+                                    :  letter === 'Y' ? "#FF0"
+                                    : "#FFF";
+            tr.appendChild(td);
+        }
+    }
+}
+   </script>
+</body>
+</html>
