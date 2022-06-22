@@ -56,7 +56,7 @@ const controller = {
     init : function(){
         diceView.init()
         balanceView.init()
-        playBtnView.init(controller)
+        playBtnView.init(this)
 
         for (let i = 0; i < 3; i++){
             this.getNextDice();
