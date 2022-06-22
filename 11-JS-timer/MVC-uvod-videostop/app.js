@@ -43,7 +43,6 @@ const balanceView = {
         this.element = document.getElementById('balance')
     },
     render : function(balance) {
-        console.log(balance)
         this.element.textContent = balance
     }  
 }
@@ -55,9 +54,14 @@ const controller = {
     playBtnView : null,
     balanceView : null, 
     init : function(){
+        diceView.init()
+        balanceView.init()
+        playBtnView.init(controller)
+
         for (let i = 0; i < 3; i++){
             this.getNextDice();
         }
+
         balanceView.render(this.appModel.balance)
     },
     playStopPress : function(){
@@ -82,8 +86,8 @@ const controller = {
     },
     evaluateDice : function() {
         if (
-            this.appModel.diceValues[0] === this.appModel.diceValues[1]
-            && this.appModel.diceValues[0] === this.appModel.diceValues[2]
+            this.appModel.values[0] === this.appModel.values[1]
+            && this.appModel.values[0] === this.appModel.values[2]
         )
             this.appModel.balance += win
         else 
@@ -99,10 +103,6 @@ const controller = {
     }
 
 }
-
-diceView.init()
-balanceView.init()
-playBtnView.init(controller)
 
 controller.appModel = appModel
 controller.diceView = diceView
