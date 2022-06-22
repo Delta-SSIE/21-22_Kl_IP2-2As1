@@ -1,9 +1,13 @@
 const imgBase = 'https://koupil.delta-www.cz/IP2/videostop/';
 const delay = 250;
 
-const diceModel = {
+const loss = -20;
+const win = +50;
+
+const appModel = {
     values : [1,1,1],
-    nextDice : 0
+    nextDice : 0,
+    balance : 1000
 }
 
 const diceView = {
@@ -32,15 +36,29 @@ const playBtnView = {
     }
 }
 
+const balanceView = {
+    element : null,
+    init : function() {
+        //najit element
+        this.element = document.getElementById('balance')
+    },
+    render : function(balance) {
+        console.log(balance)
+        this.element.textContent = balance
+    }  
+}
+
 const controller = {
     timer : null,
-    diceModel : null,
+    appModel : null,
     diceView : null,
-    playBtnView : null, 
+    playBtnView : null,
+    balanceView : null, 
     init : function(){
         for (let i = 0; i < 3; i++){
             this.getNextDice();
         }
+        balanceView.render(this.appModel.balance)
     },
     playStopPress : function(){
         //zapíná - vypíná timer
@@ -59,21 +77,35 @@ const controller = {
         window.clearInterval(this.timer)
         this.timer = null
         playBtnView.render(true)
+        this.evaluateDice()
+        balanceView.render(this.appModel.balance)        
+    },
+    evaluateDice : function() {
+        if (
+            this.appModel.diceValues[0] === this.appModel.diceValues[1]
+            && this.appModel.diceValues[0] === this.appModel.diceValues[2]
+        )
+            this.appModel.balance += win
+        else 
+            this.appModel.balance += loss
+            
     },
     getNextDice : function() {
         const num = Math.floor(Math.random() * 6) + 1
-        diceModel.values[diceModel.nextDice] = num
-        diceModel.nextDice++
-        diceModel.nextDice %= 3
-        diceView.render(diceModel.values)
+        appModel.values[appModel.nextDice] = num
+        appModel.nextDice++
+        appModel.nextDice %= 3
+        diceView.render(appModel.values)
     }
 
 }
 
 diceView.init()
+balanceView.init()
 playBtnView.init(controller)
 
-controller.diceModel = diceModel
+controller.appModel = appModel
 controller.diceView = diceView
 controller.playBtnView = playBtnView
+controller.balanceView = balanceView
 controller.init();
